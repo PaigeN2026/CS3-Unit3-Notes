@@ -18,3 +18,7 @@ p {
     padding: 10px;
     border: 5px double rgb(54, 20, 20);
 }
+
+hr {
+    color: white;
+}

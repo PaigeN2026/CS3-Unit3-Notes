@@ -9,14 +9,33 @@
 <body>
     <h1>My First Flask App!</h1>
 
-    {% if nane %}
+    {% if name %}
     <p>Hello, {{ name }}!</p>
 
     {% else %}
     <p>Hello, visitor!</p>
 
     {% endif %}
+
+    {% if year == 2026 %}
+    <p>OMG you're graduating this year!</p>
+    {% endif %}
     
+    <hr>
+    
+    <ul>
+        {% for item in favorites %}
+        <li> {{ item }} </li>
+        {% endfor %}
+    </ul>
+
+    <dl>
+        {% for key, val in ratings.items() %}
+            <dt> {{ key }}</dt>
+            <dd> {{ val }}</dd>
+        {% endfor %}
+    </dl>
+
 </body>
 
 </html>
