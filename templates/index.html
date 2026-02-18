@@ -7,35 +7,57 @@
 </head>
 
 <body>
-    <h1>My First Flask App!</h1>
 
-    {% if name %}
-    <p>Hello, {{ name }}!</p>
+    <div class="navbar">
+        <a href=" {{ url_for('index') }} " class="navbar-brand"> Home </a>
+        <a href="#" class="navbar-items"> About </a>
+        <a href="#" class="navbar-items"> Contact </a>
+    </div>
 
-    {% else %}
-    <p>Hello, visitor!</p>
-
-    {% endif %}
-
-    {% if year == 2026 %}
-    <p>OMG you're graduating this year!</p>
-    {% endif %}
+    <div class="page-content">
     
-    <hr>
+        <h1>My First Flask App!</h1>
+        
+        {% if name %}
+        <p>Hello, {{ name }}!</p>
+
+        {% else %}
+        <p>Hello, visitor!</p>
+
+        {% endif %}
+
+        {% if year == 2026 %}
+        <p>OMG you're graduating this year!</p>
+        {% endif %}
     
-    <ul>
+        <hr>
+
+        <div class="flex-container">
+
+        <ul>
+        <h2> My Favorite RomComs:</h2>
         {% for item in favorites %}
         <li> {{ item }} </li>
         {% endfor %}
-    </ul>
 
-    <dl>
+        </ul>
+
+        <dl>
+        <h2> Movie Commentary: </h2>
         {% for key, val in ratings.items() %}
-            <dt> {{ key }}</dt>
-            <dd> {{ val }}</dd>
+        <dt> {{ key }} </dt>
+        <dd> {{ val }} </dd>
         {% endfor %}
-    </dl>
 
+        </dl>
+    
+        </div>
+
+        <footer>
+            <span>Created by Paige &copy; 2026</span>
+        </footer>
+
+    </div>
 </body>
 
 </html>

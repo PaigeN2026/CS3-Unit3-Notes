@@ -1,6 +1,12 @@
+:root {
+    --accent: rgb(143, 43, 43);
+    --accent-lt: rgb(255, 255, 255);
+    --accent-dk: rgb(54, 20, 20);
+}
+
 body {
-    background: rgb(143, 43, 43);
-    color: rgb(143, 43, 43);
+    background: var(--accent);
+    color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -9,16 +15,48 @@ h1 {
     font-style: oblique;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    text-shadow: 2px 2px 0px rgb(54, 20, 20);
+    text-shadow: 2px 2px 0px var(--accent-dk);
 }
 
 p {
     background: white;
+    color: var(--accent);
     font-weight: bold;
     padding: 10px;
-    border: 5px double rgb(54, 20, 20);
+    border: 5px double var(--accent-dk);
 }
 
 hr {
     color: white;
+}
+
+ul, dl {
+    border: 2px solid white;
+    display: inline-block;
+    padding: 20px;
+}
+
+.flex-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    border: 5px solid var(--accent-dk);
+}
+
+dt {
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--accent);
+    display: inline-block;
+}
+
+footer {
+    background: var(--accent-dk);
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
 }
