@@ -1,21 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+
 :root {
     --accent: rgb(143, 43, 43);
     --accent-lt: rgb(255, 255, 255);
     --accent-dk: rgb(54, 20, 20);
+    --gradient-bg: linear-gradient(69.7deg, rgb(134, 55, 55) 40%, rgb(74, 15, 15) 100.1%);
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    margin: 25px 0px; /* y x */
+    border: 5px dashed var(--accent-lt);
 }
 
 body {
-    background: var(--accent);
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    min-height: 100vh; /* viewport height */
+    display: flex;
+    flex-direction: column;
+    background: var(--gradient-bg);
+}
+
+.page-content {
+    flex: 1;
+    padding: 10px;
 }
 
 h1 {
     color: white;
     font-style: oblique;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Bitcount Grid Double';
     text-align: center;
     text-shadow: 2px 2px 0px var(--accent-dk);
+    padding: 2%;
+
 }
 
 p {
@@ -58,5 +83,6 @@ footer {
     background: var(--accent-dk);
     color: white;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    padding: 1%;
 }
